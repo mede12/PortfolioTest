@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/* Highlight Section */
+.highlight {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    align-items: center;
+    background: #000000;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 200px;
+}
+
+.highlight img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.highlight .text {
+    flex: 1;
+    padding: 40px;
+    font-size: 4em; /* Scales dynamically */
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    font-family: Poppins;
+}
+
+/* Center the sections */
+.sections {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    gap: 20px;
+}
+
+/* Center the section content */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers items inside the section */
+    gap: 20px;
+    padding: 10px;
+    background: transparent;
+    width: 100%;
+    max-width: 800px; /* Adjust width to avoid spreading too wide */
+    margin-bottom: 100px;
+}
+
+/* Center the text and images */
+.section img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 200px;
+}
+
+.section .description {
+    text-align: center; /* Centers text inside the description */
+    font-size: 5em;
+    color: #fff; /* Adjust text color as needed */
+    padding-right: 100px;
+}
+
+.imgs{
+    width: 500px;
+    height: auto;
+}
+
+.description2 {
+    text-align: center; /* Centers text inside the description */
+    font-size: 3em;
+    color: #fff; /* Adjust text color as needed */
+    padding-right: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .highlight {
+        flex-direction: column;
+        text-align: center;
+        width: 95%;
+    }
+
+    .highlight img {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .highlight .text {
+        font-size: 4vw; /* Adjusts text size dynamically */
+        padding: 20px;
+    }
+
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .
