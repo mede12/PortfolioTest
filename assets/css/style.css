@@ -3,128 +3,134 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    color: #333;
+    background-color: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.poppins-regular {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-
 /* Highlight Section */
 .highlight {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 90%;
     max-width: 1200px;
     margin: 40px auto;
-    align-items: center;
-    background: #000000;
+    text-align: center;
+    background: #000;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
 .highlight img {
-    width: 400px;
+    width: 50%;
+    max-width: 400px;
     height: auto;
     object-fit: cover;
 }
 
 .highlight .text {
     flex: 1;
-    padding: 40px;
-    font-size: 4em; /* Scales dynamically */
+    padding: 20px;
+    font-size: 3vw;
     font-weight: bold;
-    color: #ffffff;
     text-align: center;
-    font-family: Poppins;
 }
 
-/* Center the sections */
+/* Sections Container */
 .sections {
     width: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the content horizontally */
+    align-items: center;
     gap: 20px;
 }
 
-/* Center the section content */
+/* Section Layout */
 .section {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers items inside the section */
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 10px;
-    background: transparent;
-    width: 100%;
-    max-width: 800px; /* Adjust width to avoid spreading too wide */
-    margin-bottom: 100px;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 40px;
 }
 
-/* Center the text and images */
+/* Image Styling */
 .section img {
     width: 250px;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
-    margin-right: 200px;
 }
 
+/* Text Styling */
 .section .description {
-    text-align: center; /* Centers text inside the description */
-    font-size: 5em;
-    color: #fff; /* Adjust text color as needed */
-    padding-right: 100px;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
 }
 
-.imgs{
+/* Custom Wide Image */
+.imgs {
     width: 500px;
     height: auto;
 }
 
-.description2 {
-    text-align: center; /* Centers text inside the description */
-    font-size: 3em;
-    color: #fff; /* Adjust text color as needed */
-    padding-right: 100px;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
+    /* Stack highlight section on smaller screens */
     .highlight {
         flex-direction: column;
         text-align: center;
-        width: 95%;
+        width: 100%;
     }
 
     .highlight img {
         width: 100%;
-        max-height: 300px;
+        max-width: 100%;
     }
 
     .highlight .text {
-        font-size: 4vw; /* Adjusts text size dynamically */
+        font-size: 5vw;
         padding: 20px;
     }
 
+    /* Stack sections vertically */
     .section {
         flex-direction: column;
         text-align: center;
     }
 
-    .section img {
+    .section img, .imgs {
         width: 100%;
-        max-width: 100%;
+        max-width: 300px;
     }
 
-    .
+    .section .description {
+        font-size: 4vw;
+    }
+}
+
+/* Adjustments for Mobile (iPhone XR and smaller) */
+@media (max-width: 600px) {
+    .highlight .text {
+        font-size: 6vw;
+    }
+
+    .section img, .imgs {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .section .description {
+        font-size: 5vw;
+    }
+}
